@@ -207,4 +207,17 @@ class ThirdViewController: UIViewController {
             }  
         }  
     }
+    @IBAction func zwChanged(sender: UISwitch) {
+        HHFingerprint.openAuthentication(nil) { (success, error) in
+            if !success {
+                sender.on = !sender.on
+                let alert = UIAlertController(title: error?.localizedDescription, message: nil, preferredStyle: UIAlertControllerStyle.Alert)
+                
+                alert.addAction(UIAlertAction(title: "确定", style: .Cancel, handler: { (_) in
+                    
+                }))
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
+        }
+    }
 }

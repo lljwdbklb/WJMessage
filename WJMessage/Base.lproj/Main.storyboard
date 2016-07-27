@@ -252,10 +252,24 @@
                                     <action selector="playSong:" destination="yhv-sH-jKU" eventType="touchUpInside" id="3Mw-nP-uUc"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="指纹识别" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ljr-96-hFU">
+                                <rect key="frame" x="20" y="243" width="68" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QcI-GR-hZ2">
+                                <rect key="frame" x="108" y="238" width="51" height="31"/>
+                                <connections>
+                                    <action selector="zwChanged:" destination="yhv-sH-jKU" eventType="valueChanged" id="Xag-V8-Qyr"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Ljr-96-hFU" firstAttribute="leading" secondItem="ACi-IX-rqC" secondAttribute="leading" id="1qH-CG-dFh"/>
                             <constraint firstItem="pw7-gb-cWO" firstAttribute="leading" secondItem="uf9-XK-eDC" secondAttribute="leading" id="66z-g8-RYd"/>
+                            <constraint firstItem="Ljr-96-hFU" firstAttribute="top" secondItem="ACi-IX-rqC" secondAttribute="bottom" constant="8" id="DPy-wp-x27"/>
                             <constraint firstItem="vNb-EL-ZUa" firstAttribute="leading" secondItem="6ML-eY-KO7" secondAttribute="leading" id="ETB-14-Ngk"/>
                             <constraint firstItem="6ML-eY-KO7" firstAttribute="leading" secondItem="BJ4-4h-Z9R" secondAttribute="leading" constant="20" id="H7H-HR-tQ5"/>
                             <constraint firstItem="uf9-XK-eDC" firstAttribute="leading" secondItem="6ML-eY-KO7" secondAttribute="leading" id="HLu-Gw-6Uh"/>
@@ -263,6 +277,8 @@
                             <constraint firstItem="o5C-NH-kv8" firstAttribute="centerY" secondItem="pw7-gb-cWO" secondAttribute="centerY" id="Nwv-Kz-JYX"/>
                             <constraint firstItem="o5C-NH-kv8" firstAttribute="leading" secondItem="pw7-gb-cWO" secondAttribute="trailing" constant="20" id="aBP-7q-323"/>
                             <constraint firstItem="pw7-gb-cWO" firstAttribute="top" secondItem="uf9-XK-eDC" secondAttribute="bottom" constant="8" id="c3g-Xd-ysh"/>
+                            <constraint firstItem="QcI-GR-hZ2" firstAttribute="centerY" secondItem="Ljr-96-hFU" secondAttribute="centerY" id="cFc-wL-bzJ"/>
+                            <constraint firstItem="QcI-GR-hZ2" firstAttribute="leading" secondItem="Ljr-96-hFU" secondAttribute="trailing" constant="20" id="fKf-ax-3MM"/>
                             <constraint firstItem="ACi-IX-rqC" firstAttribute="leading" secondItem="pw7-gb-cWO" secondAttribute="leading" id="hJ9-vb-r2V"/>
                             <constraint firstItem="vNb-EL-ZUa" firstAttribute="top" secondItem="6ML-eY-KO7" secondAttribute="bottom" constant="8" id="nqM-XK-Ebl"/>
                             <constraint firstItem="ACi-IX-rqC" firstAttribute="top" secondItem="pw7-gb-cWO" secondAttribute="bottom" constant="8" id="ta7-Yw-8kx"/>

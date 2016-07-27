@@ -166,6 +166,7 @@
 		18E4F6D31D38827600DC3298 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E4F6D21D38827600DC3298 /* SwiftyJSON.swift */; };
 		18E4F6D51D3882A300DC3298 /* Alamofire-SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E4F6D41D3882A300DC3298 /* Alamofire-SwiftyJSON.swift */; };
 		18FC60CE1D485E0000C48EDD /* HHSongManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FC60CD1D485E0000C48EDD /* HHSongManager.swift */; };
+		18FC60D31D48AFA900C48EDD /* HHFingerprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FC60D21D48AFA900C48EDD /* HHFingerprint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -415,6 +416,7 @@
 		18E4F6D41D3882A300DC3298 /* Alamofire-SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire-SwiftyJSON.swift"; sourceTree = "<group>"; };
 		18E4F6D61D3882EB00DC3298 /* Alamofire-SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Alamofire-SwiftyJSON.h"; sourceTree = "<group>"; };
 		18FC60CD1D485E0000C48EDD /* HHSongManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHSongManager.swift; sourceTree = "<group>"; };
+		18FC60D21D48AFA900C48EDD /* HHFingerprint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHFingerprint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -518,6 +520,7 @@
 			isa = PBXGroup;
 			children = (
 				1815F5D41D2F594300200E18 /* HHPhotoController.swift */,
+				18FC60D11D48AF5000C48EDD /* Fingerprint */,
 				18FC60C91D485D7A00C48EDD /* Song */,
 				18C2CC191D474AF7000B8168 /* Base */,
 				187E5AE81D45BA2E008A4367 /* Web */,
@@ -913,6 +916,14 @@
 			name = Song;
 			sourceTree = "<group>";
 		};
+		18FC60D11D48AF5000C48EDD /* Fingerprint */ = {
+			isa = PBXGroup;
+			children = (
+				18FC60D21D48AFA900C48EDD /* HHFingerprint.swift */,
+			);
+			name = Fingerprint;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1152,6 +1163,7 @@
 				1815F6361D334B0100200E18 /* EaseEmotionEscape.m in Sources */,
 				180A03561D2A4730005ABEF3 /* HHMessageViewController.swift in Sources */,
 				1815F6101D2F77CC00200E18 /* SDWebImageManager.m in Sources */,
+				18FC60D31D48AFA900C48EDD /* HHFingerprint.swift in Sources */,
 				180A03401D2A457E005ABEF3 /* FirstViewController.swift in Sources */,
 				1815F5661D2F580600200E18 /* CTAssetsPickerNoAssetsView.m in Sources */,
 				1815F6151D2F77CC00200E18 /* UIImage+WebP.m in Sources */,
