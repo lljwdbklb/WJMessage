@@ -524,7 +524,6 @@ extension HHMessageViewController {
         }
         
         if message.bodyType == .Text {
-            
             //模拟网络请求发送
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW,Int64(UInt64(arc4random_uniform(5)) * NSEC_PER_SEC)), dispatch_get_main_queue()) {
                 message.status = .Successed
@@ -537,7 +536,6 @@ extension HHMessageViewController {
                 debugPrint(filePath)
                 if success {
                     FileUpload.uploadImage(filePath, completionHandler: { (success, urlString) in
-                        debugPrint("")
                         message.url = urlString
                         //模拟网络请求发送
                         dispatch_after(dispatch_time(DISPATCH_TIME_NOW,Int64(UInt64(arc4random_uniform(5)) * NSEC_PER_SEC)), dispatch_get_main_queue()) {
@@ -555,5 +553,13 @@ extension HHMessageViewController {
     }
 }
 
-
+extension HHMessageViewController {
+    @available(iOS 9.0, *)
+    override func previewActionItems() -> [UIPreviewActionItem] {
+        let pre1 = UIPreviewAction(title: "删除", style: .Destructive) { (_, _) in
+         //
+        }
+        return [pre1]
+    }
+}
 

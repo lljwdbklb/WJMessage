@@ -21,8 +21,6 @@ class FirstViewController: UIViewController {
             tableArray = Array<HHSessionModel>()
         }
     }
-    
-    
 }
 
 extension FirstViewController : UITableViewDelegate,UITableViewDataSource {
@@ -37,6 +35,11 @@ extension FirstViewController : UITableViewDelegate,UITableViewDataSource {
         cell?.detailLab.text = session.lastMessage?.content
         cell?.timeLab.text = session.lastMessage?.time
         cell?.pointBtn.setTitle("\(session.unreadMessagesCount)", forState: UIControlState.Normal)
+        if #available(iOS 9.0, *) {
+            self.registerForPreviewingWithDelegate(self, sourceView: cell!)
+        } else {
+            // Fallback on earlier versions
+        }
         return cell!
     }
     
@@ -46,5 +49,24 @@ extension FirstViewController : UITableViewDelegate,UITableViewDataSource {
         let vc = HHMessageViewController()
         vc.session = session
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension FirstViewController:UIViewControllerPreviewingDelegate {
+    @available(iOS 9.0, *)
+    func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        let indexPath = tableView.indexPathForCell(previewingContext.sourceView as! UITableViewCell)!
+        let session = tableArray![indexPath.row]
+        let vc = HHMessageViewController()
+        vc.session = session
+        
+        return UINavigationController(rootViewController: vc)
+//        return vc
+    }
+    
+    @available(iOS 9.0, *)
+    func previewingContext(previewingContext: UIViewControllerPreviewing, commitViewController viewControllerToCommit: UIViewController) {
+        let nav = viewControllerToCommit as! UINavigationController
+        self.navigationController?.pushViewController(nav.topViewController!, animated: true)
     }
 }

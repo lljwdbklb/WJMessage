@@ -33,5 +33,15 @@ extension NSDate {
     func yyyyMMddHHmmss() -> String {
         return string("yyyy-MM-dd HH:mm:ss")
     }
+}
 
+extension UINavigationController {
+    /**
+     适配3DTouch
+     - returns:
+     */
+    @available(iOS 9.0, *)
+    public override func previewActionItems() -> [UIPreviewActionItem] {
+        return self.topViewController!.previewActionItems()
+    }
 }
