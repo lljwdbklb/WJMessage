@@ -227,20 +227,52 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="音频设置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pw7-gb-cWO">
+                                <rect key="frame" x="20" y="176" width="68" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="o5C-NH-kv8">
+                                <rect key="frame" x="108" y="173" width="260" height="29"/>
+                                <segments>
+                                    <segment title="SongAndShock"/>
+                                    <segment title="Song" width="50"/>
+                                    <segment title="Shock" width="50"/>
+                                    <segment title="None" width="50"/>
+                                </segments>
+                                <connections>
+                                    <action selector="songChanged:" destination="yhv-sH-jKU" eventType="valueChanged" id="zvp-XR-L1Z"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACi-IX-rqC">
+                                <rect key="frame" x="20" y="205" width="60" height="30"/>
+                                <state key="normal" title="播放音频"/>
+                                <connections>
+                                    <action selector="playSong:" destination="yhv-sH-jKU" eventType="touchUpInside" id="3Mw-nP-uUc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="pw7-gb-cWO" firstAttribute="leading" secondItem="uf9-XK-eDC" secondAttribute="leading" id="66z-g8-RYd"/>
                             <constraint firstItem="vNb-EL-ZUa" firstAttribute="leading" secondItem="6ML-eY-KO7" secondAttribute="leading" id="ETB-14-Ngk"/>
                             <constraint firstItem="6ML-eY-KO7" firstAttribute="leading" secondItem="BJ4-4h-Z9R" secondAttribute="leading" constant="20" id="H7H-HR-tQ5"/>
                             <constraint firstItem="uf9-XK-eDC" firstAttribute="leading" secondItem="6ML-eY-KO7" secondAttribute="leading" id="HLu-Gw-6Uh"/>
                             <constraint firstItem="uf9-XK-eDC" firstAttribute="top" secondItem="vNb-EL-ZUa" secondAttribute="bottom" constant="8" id="LWG-XP-mNb"/>
+                            <constraint firstItem="o5C-NH-kv8" firstAttribute="centerY" secondItem="pw7-gb-cWO" secondAttribute="centerY" id="Nwv-Kz-JYX"/>
+                            <constraint firstItem="o5C-NH-kv8" firstAttribute="leading" secondItem="pw7-gb-cWO" secondAttribute="trailing" constant="20" id="aBP-7q-323"/>
+                            <constraint firstItem="pw7-gb-cWO" firstAttribute="top" secondItem="uf9-XK-eDC" secondAttribute="bottom" constant="8" id="c3g-Xd-ysh"/>
+                            <constraint firstItem="ACi-IX-rqC" firstAttribute="leading" secondItem="pw7-gb-cWO" secondAttribute="leading" id="hJ9-vb-r2V"/>
                             <constraint firstItem="vNb-EL-ZUa" firstAttribute="top" secondItem="6ML-eY-KO7" secondAttribute="bottom" constant="8" id="nqM-XK-Ebl"/>
+                            <constraint firstItem="ACi-IX-rqC" firstAttribute="top" secondItem="pw7-gb-cWO" secondAttribute="bottom" constant="8" id="ta7-Yw-8kx"/>
                             <constraint firstItem="6ML-eY-KO7" firstAttribute="top" secondItem="Vsc-FU-URf" secondAttribute="bottom" constant="25" id="tyD-B9-BmP"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="contacts" id="NXg-Ng-KV3"/>
                     <connections>
                         <outlet property="heightLab" destination="vNb-EL-ZUa" id="dnH-en-cbN"/>
+                        <outlet property="songSegCont" destination="o5C-NH-kv8" id="sKd-yB-TNT"/>
                         <outlet property="stepLab" destination="6ML-eY-KO7" id="gCk-DJ-7Fs"/>
                         <outlet property="weightLab" destination="uf9-XK-eDC" id="nnj-tq-6lZ"/>
                     </connections>

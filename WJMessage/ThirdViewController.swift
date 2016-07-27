@@ -15,8 +15,11 @@ class ThirdViewController: UIViewController {
     @IBOutlet weak var stepLab: UILabel!
     @IBOutlet weak var heightLab: UILabel!
     @IBOutlet weak var weightLab: UILabel!
+    @IBOutlet weak var songSegCont: UISegmentedControl!
     
     var step, height, weight:HKQuantitySample?
+    var songManager = HHSongManager(fileName: "haha")
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +32,18 @@ class ThirdViewController: UIViewController {
                 
             }
         }
+        songSegCont.selectedSegmentIndex = songManager.type.rawValue
+    }
+    
+    @IBAction func songChanged(sender: UISegmentedControl) {
+        if let type = HHSongType(rawValue: sender.selectedSegmentIndex) {
+            debugPrint("\(type)")
+            songManager.type = type
+        }
+    }
+    
+    @IBAction func playSong(sender: AnyObject) {
+        songManager.playSong()
     }
     
     func readMostRecentSample(sampleType:HKSampleType , completion: ((HKSample!, NSError!) -> Void)!)

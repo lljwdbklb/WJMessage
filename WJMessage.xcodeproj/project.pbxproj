@@ -165,6 +165,7 @@
 		18E4F6CC1D387B2000DC3298 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E4F6B91D387B2000DC3298 /* Validation.swift */; };
 		18E4F6D31D38827600DC3298 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E4F6D21D38827600DC3298 /* SwiftyJSON.swift */; };
 		18E4F6D51D3882A300DC3298 /* Alamofire-SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E4F6D41D3882A300DC3298 /* Alamofire-SwiftyJSON.swift */; };
+		18FC60CE1D485E0000C48EDD /* HHSongManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FC60CD1D485E0000C48EDD /* HHSongManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -413,6 +414,7 @@
 		18E4F6D21D38827600DC3298 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		18E4F6D41D3882A300DC3298 /* Alamofire-SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire-SwiftyJSON.swift"; sourceTree = "<group>"; };
 		18E4F6D61D3882EB00DC3298 /* Alamofire-SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Alamofire-SwiftyJSON.h"; sourceTree = "<group>"; };
+		18FC60CD1D485E0000C48EDD /* HHSongManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHSongManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -516,14 +518,15 @@
 			isa = PBXGroup;
 			children = (
 				1815F5D41D2F594300200E18 /* HHPhotoController.swift */,
+				18FC60C91D485D7A00C48EDD /* Song */,
 				18C2CC191D474AF7000B8168 /* Base */,
 				187E5AE81D45BA2E008A4367 /* Web */,
 				183700EF1D3E1E3B000AF6F6 /* ScanCode */,
 				18E4F6D11D38827600DC3298 /* SwiftyJSON */,
 				18E4F6A41D387AE200DC3298 /* Alamofire */,
+				1815F5E71D2F77CC00200E18 /* SDWebImage */,
 				1815F61D1D2FB6F300200E18 /* DACircularProgress */,
 				1815F6191D2F78DD00200E18 /* MBProgressHUD */,
-				1815F5E71D2F77CC00200E18 /* SDWebImage */,
 				1815F5DA1D2F75DA00200E18 /* PureLayout */,
 				1815F56D1D2F583500200E18 /* MWPhotoBrowser */,
 				1815F4E81D2F580600200E18 /* CTAssetsPickerController */,
@@ -902,6 +905,14 @@
 			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
+		18FC60C91D485D7A00C48EDD /* Song */ = {
+			isa = PBXGroup;
+			children = (
+				18FC60CD1D485E0000C48EDD /* HHSongManager.swift */,
+			);
+			name = Song;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1166,6 +1177,7 @@
 				1815F5CB1D2F586C00200E18 /* MWCaptionView.m in Sources */,
 				180A03581D2A4835005ABEF3 /* HHMessageModel.swift in Sources */,
 				1815F61C1D2F790B00200E18 /* MBProgressHUD.m in Sources */,
+				18FC60CE1D485E0000C48EDD /* HHSongManager.swift in Sources */,
 				1815F5681D2F580600200E18 /* CTAssetThumbnailOverlay.m in Sources */,
 				1815F5E61D2F75DA00200E18 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				1815F5561D2F580600200E18 /* CTAssetItemViewController.m in Sources */,

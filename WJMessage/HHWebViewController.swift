@@ -217,8 +217,8 @@ class HHWebViewController: UIViewController,NJKWebViewProgressDelegate {
             return
         }
         if let url = NSURL(string:urlStr!) {
-            let request = NSURLRequest(URL: url)
-            self.webView.loadRequest(request)
+            let request = NSURLRequest(URL: url,cachePolicy: .UseProtocolCachePolicy,timeoutInterval: 30)
+            webView.loadRequest(request)
         }
     }
     
