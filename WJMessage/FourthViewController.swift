@@ -22,6 +22,15 @@ class FourthViewController: UIViewController,HHScanViewControllerDelegate {
         self.imageView.image = UIImage.qrcode(self.textLab.text!)
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.sharedApplication().idleTimerDisabled = true
+    }
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        UIApplication.sharedApplication().idleTimerDisabled = false
+    }
+    
     func tapGestureRecognizer() {
         if let image = imageView.image {
             let string = String.qrcodeString(image)
@@ -37,11 +46,6 @@ class FourthViewController: UIViewController,HHScanViewControllerDelegate {
             }))
             self.presentViewController(alert, animated: true, completion: nil)
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func clickBtn(sender: AnyObject) {

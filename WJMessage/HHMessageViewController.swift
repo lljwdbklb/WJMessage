@@ -46,6 +46,11 @@ class HHMessageViewController: UIViewController,HHMessageMoreViewDelegate {
         loadData()
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.menuController.setMenuVisible(false, animated: true)
+    }
+    
     private func _setup()  {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(didHideMenuNotification), name: UIMenuControllerDidHideMenuNotification, object: nil)
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(keyBoardHidden(_:))))

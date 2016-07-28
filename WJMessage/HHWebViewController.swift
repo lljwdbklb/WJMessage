@@ -118,7 +118,6 @@ class HHWebViewController: UIViewController,NJKWebViewProgressDelegate {
     @objc private func swipePanGestureHandler(swipe:UIPanGestureRecognizer) {
         let translation = swipe.translationInView(self.webView)
         let location = swipe.locationInView(self.webView)
-//        debugPrint("pan x \(translation.x),pan y \(translation.y)")
         if (swipe.state == .Began) {
             if location.x <= 50 && translation.x >= 0 {  //开始动画
                 self.startPopSnapshotView()
