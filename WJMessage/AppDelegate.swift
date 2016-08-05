@@ -19,7 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         //获取idfa设备唯一id
         let idfa = ASIdentifierManager.sharedManager().advertisingIdentifier.UUIDString
-        debugPrint(idfa)
+//        debugLog(idfa)
+        debugLog(idfa)
+        warnLog(idfa)
+        errorLog(idfa)
 //        "46138127-975B-4858-8809-83E0B447D90B"
 //        "46138127-975B-4858-8809-83E0B447D90B"
         return true
@@ -48,15 +51,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
-        debugPrint(url.scheme)
+        debugLog(url.scheme)
         return true
     }
     func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
-        debugPrint(url.scheme)
+        debugLog(url.scheme)
         return true
     }
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-        debugPrint(url.scheme)
+        debugLog(url.scheme)
         return true
     }
 }

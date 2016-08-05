@@ -13,12 +13,12 @@ class FileUpload: NSObject {
     class func uploadImage(file:String, completionHandler:((success:Bool,urlString:String?)->Void)) {
 //        "http://t.ekangzhi.com:7080/pub/upfile"
 //        upload(.POST, "http://t.ekangzhi.com:7080/pub/upfile", file: NSURL(fileURLWithPath: file)).responseJSON { (response) in
-//            debugPrint(response.result.value)
+//            debugLog(response.result.value)
 //            if response.result.error != nil {
 //                completionHandler(success: false,urlString: nil)
 //            } else {
 //                let json = JSON(response.result.value!)
-//                debugPrint(json)
+//                debugLog(json)
 //                completionHandler(success: true,urlString: json["appFile"].stringValue)
 //            }
 //        }
@@ -28,18 +28,18 @@ class FileUpload: NSObject {
             switch result {
             case .Success(let upload,_,_) :
                 upload.responseJSON(completionHandler: { (response) in
-                    debugPrint(response.result)
+                    debugLog(response.result)
                     if response.result.error != nil {
                         completionHandler(success: false,urlString: nil)
                     } else {
                         let json = JSON(response.result.value!)
-                        debugPrint(json)
+                        debugLog(json)
                         completionHandler(success: true,urlString: json["appFile"].stringValue)
                     }
                 })
                 break
             case .Failure(let encodingError):
-                debugPrint(encodingError)
+                debugLog(encodingError)
                 completionHandler(success: false,urlString: nil)
                 break
             }

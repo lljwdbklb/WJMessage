@@ -70,7 +70,7 @@ class SecondViewController: UIViewController,UITextViewDelegate {
 
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
         if text.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0 {
-            debugPrint("text -- \(text) \n lenght -- \(text.lengthOfBytesUsingEncoding(NSUTF8StringEncoding))")
+            debugLog("text -- \(text) \n lenght -- \(text.lengthOfBytesUsingEncoding(NSUTF8StringEncoding))")
         }
         return true
     }

@@ -138,6 +138,20 @@
 		1815F64B1D3724F600200E18 /* HHMoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815F64A1D3724F600200E18 /* HHMoreItem.swift */; };
 		1815F6571D378A1200200E18 /* FileUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815F6561D378A1200200E18 /* FileUpload.swift */; };
 		183700EE1D3E13AD000AF6F6 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183700ED1D3E13AD000AF6F6 /* FourthViewController.swift */; };
+		186022311D543F270074F79A /* EMAudioPlayerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 186022131D543F270074F79A /* EMAudioPlayerUtil.m */; };
+		186022321D543F270074F79A /* EMAudioRecorderUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 186022151D543F270074F79A /* EMAudioRecorderUtil.m */; };
+		186022331D543F270074F79A /* EMCDDeviceManager+Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 186022171D543F270074F79A /* EMCDDeviceManager+Media.m */; };
+		186022341D543F270074F79A /* EMCDDeviceManager+Microphone.m in Sources */ = {isa = PBXBuildFile; fileRef = 186022191D543F270074F79A /* EMCDDeviceManager+Microphone.m */; };
+		186022351D543F270074F79A /* EMCDDeviceManager+ProximitySensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1860221B1D543F270074F79A /* EMCDDeviceManager+ProximitySensor.m */; };
+		186022361D543F270074F79A /* EMCDDeviceManager+Remind.m in Sources */ = {isa = PBXBuildFile; fileRef = 1860221D1D543F270074F79A /* EMCDDeviceManager+Remind.m */; };
+		186022371D543F270074F79A /* EMCDDeviceManagerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 186022201D543F270074F79A /* EMCDDeviceManagerBase.m */; };
+		186022381D543F270074F79A /* amrFileCodec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 186022241D543F270074F79A /* amrFileCodec.mm */; };
+		186022391D543F270074F79A /* wav.mm in Sources */ = {isa = PBXBuildFile; fileRef = 186022261D543F270074F79A /* wav.mm */; };
+		1860223A1D543F270074F79A /* EMVoiceConverter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 186022281D543F270074F79A /* EMVoiceConverter.mm */; };
+		1860223B1D543F270074F79A /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1860222C1D543F270074F79A /* libopencore-amrnb.a */; };
+		1860223C1D543F270074F79A /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 186022301D543F270074F79A /* libopencore-amrwb.a */; };
+		1860223E1D54433E0074F79A /* HHMessageRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860223D1D54433E0074F79A /* HHMessageRecordView.swift */; };
+		186022411D5468D80074F79A /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186022401D5468D80074F79A /* Log.swift */; };
 		186969DA1D3E20AE0004B154 /* HHScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186969D91D3E20AE0004B154 /* HHScanViewController.swift */; };
 		187E5AE41D421291008A4367 /* CodeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E5AE31D421291008A4367 /* CodeUtil.swift */; };
 		187E5AEE1D45BA4C008A4367 /* NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E5AEB1D45BA4C008A4367 /* NJKWebViewProgress.m */; };
@@ -383,6 +397,38 @@
 		1815F64A1D3724F600200E18 /* HHMoreItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHMoreItem.swift; sourceTree = "<group>"; };
 		1815F6561D378A1200200E18 /* FileUpload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUpload.swift; sourceTree = "<group>"; };
 		183700ED1D3E13AD000AF6F6 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		1860220E1D543F270074F79A /* EMCDDeviceManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCDDeviceManagerDelegate.h; sourceTree = "<group>"; };
+		1860220F1D543F270074F79A /* EMCDDeviceManagerProximitySensorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCDDeviceManagerProximitySensorDelegate.h; sourceTree = "<group>"; };
+		186022111D543F270074F79A /* DemoErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoErrorCode.h; sourceTree = "<group>"; };
+		186022121D543F270074F79A /* EMAudioPlayerUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMAudioPlayerUtil.h; sourceTree = "<group>"; };
+		186022131D543F270074F79A /* EMAudioPlayerUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMAudioPlayerUtil.m; sourceTree = "<group>"; };
+		186022141D543F270074F79A /* EMAudioRecorderUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMAudioRecorderUtil.h; sourceTree = "<group>"; };
+		186022151D543F270074F79A /* EMAudioRecorderUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMAudioRecorderUtil.m; sourceTree = "<group>"; };
+		186022161D543F270074F79A /* EMCDDeviceManager+Media.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMCDDeviceManager+Media.h"; sourceTree = "<group>"; };
+		186022171D543F270074F79A /* EMCDDeviceManager+Media.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EMCDDeviceManager+Media.m"; sourceTree = "<group>"; };
+		186022181D543F270074F79A /* EMCDDeviceManager+Microphone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMCDDeviceManager+Microphone.h"; sourceTree = "<group>"; };
+		186022191D543F270074F79A /* EMCDDeviceManager+Microphone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EMCDDeviceManager+Microphone.m"; sourceTree = "<group>"; };
+		1860221A1D543F270074F79A /* EMCDDeviceManager+ProximitySensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMCDDeviceManager+ProximitySensor.h"; sourceTree = "<group>"; };
+		1860221B1D543F270074F79A /* EMCDDeviceManager+ProximitySensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EMCDDeviceManager+ProximitySensor.m"; sourceTree = "<group>"; };
+		1860221C1D543F270074F79A /* EMCDDeviceManager+Remind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMCDDeviceManager+Remind.h"; sourceTree = "<group>"; };
+		1860221D1D543F270074F79A /* EMCDDeviceManager+Remind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EMCDDeviceManager+Remind.m"; sourceTree = "<group>"; };
+		1860221E1D543F270074F79A /* EMCDDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCDDeviceManager.h; sourceTree = "<group>"; };
+		1860221F1D543F270074F79A /* EMCDDeviceManagerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCDDeviceManagerBase.h; sourceTree = "<group>"; };
+		186022201D543F270074F79A /* EMCDDeviceManagerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMCDDeviceManagerBase.m; sourceTree = "<group>"; };
+		186022231D543F270074F79A /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
+		186022241D543F270074F79A /* amrFileCodec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = amrFileCodec.mm; sourceTree = "<group>"; };
+		186022251D543F270074F79A /* wav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wav.h; sourceTree = "<group>"; };
+		186022261D543F270074F79A /* wav.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = wav.mm; sourceTree = "<group>"; };
+		186022271D543F270074F79A /* EMVoiceConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMVoiceConverter.h; sourceTree = "<group>"; };
+		186022281D543F270074F79A /* EMVoiceConverter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EMVoiceConverter.mm; sourceTree = "<group>"; };
+		1860222A1D543F270074F79A /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
+		1860222B1D543F270074F79A /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
+		1860222C1D543F270074F79A /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
+		1860222E1D543F270074F79A /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
+		1860222F1D543F270074F79A /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
+		186022301D543F270074F79A /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
+		1860223D1D54433E0074F79A /* HHMessageRecordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHMessageRecordView.swift; sourceTree = "<group>"; };
+		186022401D5468D80074F79A /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		186969D91D3E20AE0004B154 /* HHScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHScanViewController.swift; sourceTree = "<group>"; };
 		187E5AE31D421291008A4367 /* CodeUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeUtil.swift; sourceTree = "<group>"; };
 		187E5AEA1D45BA4C008A4367 /* NJKWebViewProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgress.h; sourceTree = "<group>"; };
@@ -425,6 +471,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1815F6441D3623F500200E18 /* HealthKit.framework in Frameworks */,
+				1860223C1D543F270074F79A /* libopencore-amrwb.a in Frameworks */,
+				1860223B1D543F270074F79A /* libopencore-amrnb.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +509,7 @@
 				1815F6381D334DF000200E18 /* HHMessageFacialView.swift */,
 				1815F63C1D34E48F00200E18 /* HHMessageTextView.swift */,
 				1815F63F1D361B1400200E18 /* HHMessageMoreView.swift */,
+				1860223D1D54433E0074F79A /* HHMessageRecordView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -520,6 +569,8 @@
 			isa = PBXGroup;
 			children = (
 				1815F5D41D2F594300200E18 /* HHPhotoController.swift */,
+				1860223F1D5468BD0074F79A /* Log */,
+				1860220C1D543F270074F79A /* DeviceHelper */,
 				18FC60D11D48AF5000C48EDD /* Fingerprint */,
 				18FC60C91D485D7A00C48EDD /* Song */,
 				18C2CC191D474AF7000B8168 /* Base */,
@@ -834,6 +885,99 @@
 			name = ScanCode;
 			sourceTree = "<group>";
 		};
+		1860220C1D543F270074F79A /* DeviceHelper */ = {
+			isa = PBXGroup;
+			children = (
+				1860220D1D543F270074F79A /* delegates */,
+				186022101D543F270074F79A /* internal */,
+				186022211D543F270074F79A /* VoiceConvert */,
+			);
+			path = DeviceHelper;
+			sourceTree = "<group>";
+		};
+		1860220D1D543F270074F79A /* delegates */ = {
+			isa = PBXGroup;
+			children = (
+				1860220E1D543F270074F79A /* EMCDDeviceManagerDelegate.h */,
+				1860220F1D543F270074F79A /* EMCDDeviceManagerProximitySensorDelegate.h */,
+			);
+			path = delegates;
+			sourceTree = "<group>";
+		};
+		186022101D543F270074F79A /* internal */ = {
+			isa = PBXGroup;
+			children = (
+				186022111D543F270074F79A /* DemoErrorCode.h */,
+				186022121D543F270074F79A /* EMAudioPlayerUtil.h */,
+				186022131D543F270074F79A /* EMAudioPlayerUtil.m */,
+				186022141D543F270074F79A /* EMAudioRecorderUtil.h */,
+				186022151D543F270074F79A /* EMAudioRecorderUtil.m */,
+				186022161D543F270074F79A /* EMCDDeviceManager+Media.h */,
+				186022171D543F270074F79A /* EMCDDeviceManager+Media.m */,
+				186022181D543F270074F79A /* EMCDDeviceManager+Microphone.h */,
+				186022191D543F270074F79A /* EMCDDeviceManager+Microphone.m */,
+				1860221A1D543F270074F79A /* EMCDDeviceManager+ProximitySensor.h */,
+				1860221B1D543F270074F79A /* EMCDDeviceManager+ProximitySensor.m */,
+				1860221C1D543F270074F79A /* EMCDDeviceManager+Remind.h */,
+				1860221D1D543F270074F79A /* EMCDDeviceManager+Remind.m */,
+				1860221E1D543F270074F79A /* EMCDDeviceManager.h */,
+				1860221F1D543F270074F79A /* EMCDDeviceManagerBase.h */,
+				186022201D543F270074F79A /* EMCDDeviceManagerBase.m */,
+			);
+			path = internal;
+			sourceTree = "<group>";
+		};
+		186022211D543F270074F79A /* VoiceConvert */ = {
+			isa = PBXGroup;
+			children = (
+				186022221D543F270074F79A /* amrwapper */,
+				186022271D543F270074F79A /* EMVoiceConverter.h */,
+				186022281D543F270074F79A /* EMVoiceConverter.mm */,
+				186022291D543F270074F79A /* opencore-amrnb */,
+				1860222D1D543F270074F79A /* opencore-amrwb */,
+			);
+			path = VoiceConvert;
+			sourceTree = "<group>";
+		};
+		186022221D543F270074F79A /* amrwapper */ = {
+			isa = PBXGroup;
+			children = (
+				186022231D543F270074F79A /* amrFileCodec.h */,
+				186022241D543F270074F79A /* amrFileCodec.mm */,
+				186022251D543F270074F79A /* wav.h */,
+				186022261D543F270074F79A /* wav.mm */,
+			);
+			path = amrwapper;
+			sourceTree = "<group>";
+		};
+		186022291D543F270074F79A /* opencore-amrnb */ = {
+			isa = PBXGroup;
+			children = (
+				1860222A1D543F270074F79A /* interf_dec.h */,
+				1860222B1D543F270074F79A /* interf_enc.h */,
+				1860222C1D543F270074F79A /* libopencore-amrnb.a */,
+			);
+			path = "opencore-amrnb";
+			sourceTree = "<group>";
+		};
+		1860222D1D543F270074F79A /* opencore-amrwb */ = {
+			isa = PBXGroup;
+			children = (
+				1860222E1D543F270074F79A /* dec_if.h */,
+				1860222F1D543F270074F79A /* if_rom.h */,
+				186022301D543F270074F79A /* libopencore-amrwb.a */,
+			);
+			path = "opencore-amrwb";
+			sourceTree = "<group>";
+		};
+		1860223F1D5468BD0074F79A /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				186022401D5468D80074F79A /* Log.swift */,
+			);
+			name = Log;
+			sourceTree = "<group>";
+		};
 		187E5AE81D45BA2E008A4367 /* Web */ = {
 			isa = PBXGroup;
 			children = (
@@ -1092,7 +1236,9 @@
 				1815F55F1D2F580600200E18 /* CTAssetsGridViewFooter.m in Sources */,
 				1815F55B1D2F580600200E18 /* CTAssetsGridSelectedView.m in Sources */,
 				18E4F6D51D3882A300DC3298 /* Alamofire-SwiftyJSON.swift in Sources */,
+				186022341D543F270074F79A /* EMCDDeviceManager+Microphone.m in Sources */,
 				1815F5E41D2F75DA00200E18 /* ALView+PureLayout.m in Sources */,
+				186022381D543F270074F79A /* amrFileCodec.mm in Sources */,
 				1815F5D21D2F586C00200E18 /* MWZoomingScrollView.m in Sources */,
 				18E4F6BB1D387B2000DC3298 /* Download.swift in Sources */,
 				1815F5501D2F580600200E18 /* PHImageManager+CTAssetsPickerController.m in Sources */,
@@ -1122,13 +1268,16 @@
 				1815F6091D2F77CC00200E18 /* MKAnnotationView+WebCache.m in Sources */,
 				1815F5D51D2F594300200E18 /* HHPhotoController.swift in Sources */,
 				1815F6401D361B1400200E18 /* HHMessageMoreView.swift in Sources */,
+				186022411D5468D80074F79A /* Log.swift in Sources */,
 				187E5AE41D421291008A4367 /* CodeUtil.swift in Sources */,
 				186969DA1D3E20AE0004B154 /* HHScanViewController.swift in Sources */,
+				186022371D543F270074F79A /* EMCDDeviceManagerBase.m in Sources */,
 				1815F5D31D2F586C00200E18 /* UIImage+MWPhotoBrowser.m in Sources */,
 				18C2CC1E1D474D26000B8168 /* HHNavigationController.m in Sources */,
 				18E4F6C01D387B2000DC3298 /* MultipartFormData.swift in Sources */,
 				18E4F6C51D387B2000DC3298 /* Response.swift in Sources */,
 				1815F60E1D2F77CC00200E18 /* SDWebImageDownloader.m in Sources */,
+				186022391D543F270074F79A /* wav.mm in Sources */,
 				1815F5591D2F580600200E18 /* CTAssetSelectionButton.m in Sources */,
 				187E5AEE1D45BA4C008A4367 /* NJKWebViewProgress.m in Sources */,
 				18E4F6D31D38827600DC3298 /* SwiftyJSON.swift in Sources */,
@@ -1143,6 +1292,7 @@
 				1815F5D01D2F586C00200E18 /* MWTapDetectingImageView.m in Sources */,
 				180950211D2E285B00183580 /* HHMessageChatToolbar.swift in Sources */,
 				1815F5601D2F580600200E18 /* CTAssetsGridViewLayout.m in Sources */,
+				1860223E1D54433E0074F79A /* HHMessageRecordView.swift in Sources */,
 				187E5AEF1D45BA4C008A4367 /* NJKWebViewProgressView.m in Sources */,
 				18E4F6BC1D387B2000DC3298 /* Error.swift in Sources */,
 				1815F54C1D2F580600200E18 /* NSIndexSet+CTAssetsPickerController.m in Sources */,
@@ -1155,6 +1305,7 @@
 				180950191D2CFC7900183580 /* HHMessageBubbleView.swift in Sources */,
 				1815F6171D2F77CC00200E18 /* UIImageView+WebCache.m in Sources */,
 				180950151D2CD53700183580 /* HHCellFrameModel.swift in Sources */,
+				186022331D543F270074F79A /* EMCDDeviceManager+Media.m in Sources */,
 				18E4F6C61D387B2000DC3298 /* ResponseSerialization.swift in Sources */,
 				1815F60F1D2F77CC00200E18 /* SDWebImageDownloaderOperation.m in Sources */,
 				1815F54D1D2F580600200E18 /* NSNumberFormatter+CTAssetsPickerController.m in Sources */,
@@ -1163,8 +1314,11 @@
 				1815F6361D334B0100200E18 /* EaseEmotionEscape.m in Sources */,
 				180A03561D2A4730005ABEF3 /* HHMessageViewController.swift in Sources */,
 				1815F6101D2F77CC00200E18 /* SDWebImageManager.m in Sources */,
+				186022311D543F270074F79A /* EMAudioPlayerUtil.m in Sources */,
 				18FC60D31D48AFA900C48EDD /* HHFingerprint.swift in Sources */,
+				186022361D543F270074F79A /* EMCDDeviceManager+Remind.m in Sources */,
 				180A03401D2A457E005ABEF3 /* FirstViewController.swift in Sources */,
+				1860223A1D543F270074F79A /* EMVoiceConverter.mm in Sources */,
 				1815F5661D2F580600200E18 /* CTAssetsPickerNoAssetsView.m in Sources */,
 				1815F6151D2F77CC00200E18 /* UIImage+WebP.m in Sources */,
 				18E4F6CC1D387B2000DC3298 /* Validation.swift in Sources */,
@@ -1186,10 +1340,12 @@
 				1815F63D1D34E48F00200E18 /* HHMessageTextView.swift in Sources */,
 				1815F5CC1D2F586C00200E18 /* MWGridCell.m in Sources */,
 				1815F5621D2F580600200E18 /* CTAssetsPageView.m in Sources */,
+				186022321D543F270074F79A /* EMAudioRecorderUtil.m in Sources */,
 				1815F5CB1D2F586C00200E18 /* MWCaptionView.m in Sources */,
 				180A03581D2A4835005ABEF3 /* HHMessageModel.swift in Sources */,
 				1815F61C1D2F790B00200E18 /* MBProgressHUD.m in Sources */,
 				18FC60CE1D485E0000C48EDD /* HHSongManager.swift in Sources */,
+				186022351D543F270074F79A /* EMCDDeviceManager+ProximitySensor.m in Sources */,
 				1815F5681D2F580600200E18 /* CTAssetThumbnailOverlay.m in Sources */,
 				1815F5E61D2F75DA00200E18 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				1815F5561D2F580600200E18 /* CTAssetItemViewController.m in Sources */,
@@ -1320,6 +1476,11 @@
 				INFOPLIST_FILE = WJMessage/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(SRCROOT)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WJMessage/DeviceHelper/VoiceConvert/opencore-amrnb",
+					"$(PROJECT_DIR)/WJMessage/DeviceHelper/VoiceConvert/opencore-amrwb",
+				);
 				MACH_O_TYPE = mh_execute;
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jun.WJMessage;
@@ -1344,6 +1505,11 @@
 				INFOPLIST_FILE = WJMessage/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(SRCROOT)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WJMessage/DeviceHelper/VoiceConvert/opencore-amrnb",
+					"$(PROJECT_DIR)/WJMessage/DeviceHelper/VoiceConvert/opencore-amrwb",
+				);
 				MACH_O_TYPE = mh_execute;
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jun.WJMessage;

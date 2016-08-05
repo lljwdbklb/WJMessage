@@ -24,6 +24,7 @@ extension UIImage {
 extension String {
     //ios8
     //识别二维码
+    @available(iOS 8.0, *)
     static func qrcodeString(image:UIImage) -> String? {
         let content = CIContext(options: nil)
         let detector = CIDetector(ofType: CIDetectorTypeQRCode, context: content, options: [CIDetectorAccuracy:CIDetectorAccuracyHigh])

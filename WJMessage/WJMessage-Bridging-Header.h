@@ -13,3 +13,4 @@
 #import "HHNavigationController.h"
 #import "NJKWebViewProgressView.h"
 #import "CTAssetsPickerController.h"
+#import "EMCDDeviceManager.h"

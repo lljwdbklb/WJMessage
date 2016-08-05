@@ -202,7 +202,7 @@ class HHMessageCell: UITableViewCell {
     }
     
     func setContent()  {
-        debugPrint(self.messageTextFont)
+        debugLog(self.messageTextFont)
         
         self.avatarView?.image = self.model?.avatar
         if model?.bodyType == .Text {

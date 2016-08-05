@@ -253,7 +253,7 @@ extension HHMessageChatToolbar:HHMessageTextViewDelegate {
         if height == previousTextViewContentHeight {
             return
         } else {
-            debugPrint(height)
+            debugLog(height)
             textViewHeightConstraint?.constant = height
             previousTextViewContentHeight = height
             self.delegate?.chatToolbarDidChangeFrameToHeight(height)

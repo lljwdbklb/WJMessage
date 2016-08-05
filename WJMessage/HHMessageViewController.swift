@@ -156,10 +156,10 @@ class HHMessageViewController: UIViewController,HHMessageMoreViewDelegate {
         faceView?.delegate = self
         view.addSubview(faceView!)
         
-        recordView = UIView()
+        recordView = HHMessageRecordView()
         recordView?.translatesAutoresizingMaskIntoConstraints = false
         recordView?.hidden = true
-        recordView?.backgroundColor = UIColor.purpleColor()
+        recordView?.backgroundColor = UIColor.whiteColor()
         view.addSubview(recordView!)
         
         moreView = HHMessageMoreView()
@@ -250,7 +250,7 @@ class HHMessageViewController: UIViewController,HHMessageMoreViewDelegate {
     }
     //MARK: 选择更多菜单
     func didSelectMoreItem(index: Int) {
-        debugPrint("\(index)")
+        debugLog("\(index)")
     }
     
     deinit {
@@ -283,7 +283,7 @@ extension HHMessageViewController : UITableViewDelegate,UITableViewDataSource {
         if messageCell == nil {
             messageCell = HHMessageCell(style: UITableViewCellStyle.Default, reuseIdentifier: cellIdentifier,model: message as! HHCellFrameModel)
         }
-        debugPrint("\(messageCell?.statusSize)")
+        debugLog("\(messageCell?.statusSize)")
         messageCell?.model = message as? HHCellFrameModel
         messageCell?.delegate = self
         return messageCell!
@@ -538,7 +538,7 @@ extension HHMessageViewController {
             }
         } else {
             FileUpload.saveTempFile(UIImageJPEGRepresentation(message.image!, 0.8)!) { (success, filePath) in
-                debugPrint(filePath)
+                debugLog(filePath)
                 if success {
                     FileUpload.uploadImage(filePath, completionHandler: { (success, urlString) in
                         message.url = urlString

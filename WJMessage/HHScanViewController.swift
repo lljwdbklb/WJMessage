@@ -216,7 +216,7 @@ extension HHScanViewController:AVCaptureMetadataOutputObjectsDelegate {
         
         if !scanSuccess && scanCenterView.layer.frame.contains(barCodeObject.bounds) {//是否在区域范围内
             scanSuccess = true
-            debugPrint("\(scanCenterView.layer.frame) -- \(barCodeObject.bounds)")
+            debugLog("\(scanCenterView.layer.frame) -- \(barCodeObject.bounds)")
             delegate?.didScanText(self,text: barCodeObject.stringValue)
         }
     }

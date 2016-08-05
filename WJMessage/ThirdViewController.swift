@@ -37,7 +37,7 @@ class ThirdViewController: UIViewController {
     
     @IBAction func songChanged(sender: UISegmentedControl) {
         if let type = HHSongType(rawValue: sender.selectedSegmentIndex) {
-            debugPrint("\(type)")
+            debugLog("\(type)")
             songManager.type = type
         }
     }
@@ -75,7 +75,7 @@ class ThirdViewController: UIViewController {
     }
     
     func readStep(startTime:NSDate, endTime:NSDate,completion: ((Int!, NSError!) -> Void)!) {
-        debugPrint("\(startTime.yyyyMMddHHmmss()) \(endTime.yyyyMMddHHmmss())")
+        debugLog("\(startTime.yyyyMMddHHmmss()) \(endTime.yyyyMMddHHmmss())")
         let sampleType = HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierStepCount)!
         let mostRecentPredicate = HKQuery.predicateForSamplesWithStartDate(startTime, endDate:endTime, options: .None)
         // 2. Build the sort descriptor to return the samples in descending order
@@ -126,7 +126,7 @@ class ThirdViewController: UIViewController {
         readMostRecentSample(sampleType!, completion: { (mostRecentWeight, error) -> Void in
             if( error != nil )
             {
-                debugPrint("Error reading weight from HealthKit Store: \(error.localizedDescription)")
+                debugLog("Error reading weight from HealthKit Store: \(error.localizedDescription)")
                 return;
             }
             var heightLocalizedString = "身高：Unknown"
@@ -152,7 +152,7 @@ class ThirdViewController: UIViewController {
         readMostRecentSample(sampleType!, completion: { (mostRecentWeight, error) -> Void in
             if( error != nil )
             {
-                debugPrint("Error reading weight from HealthKit Store: \(error.localizedDescription)")
+                debugLog("Error reading weight from HealthKit Store: \(error.localizedDescription)")
                 return;
             }
             var weightLocalizedString = "Unknown"

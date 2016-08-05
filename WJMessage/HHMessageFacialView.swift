@@ -104,7 +104,7 @@ extension HHMessageFacialView:UICollectionViewDelegateFlowLayout,UICollectionVie
         let emotionManager = emotionManagers[indexPath.section]
         let emotion = emotionManager.emotions[indexPath.row]
 //        cell.backgroundColor = UIColor.blueColor()
-        debugPrint(emotion)
+        debugLog(emotion)
         cell.emotion = emotion
         cell.userInteractionEnabled = true
         cell.delegate = self
@@ -142,7 +142,7 @@ extension HHMessageFacialView:UICollectionViewDelegateFlowLayout,UICollectionVie
         let maxCol = emotionManager.emotionCol
         let itemWidth = self.frame.size.width / CGFloat(maxCol)
         let itemHeight = self.frame.size.height / CGFloat(maxRow)
-        debugPrint("\(itemWidth) -- \(itemHeight)")
+        debugLog("\(itemWidth) -- \(itemHeight)")
         return CGSize(width: itemWidth,height:  itemHeight)
     }
     
