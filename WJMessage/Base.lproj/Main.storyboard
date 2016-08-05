@@ -159,7 +159,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sd8-cL-VsZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sd8-cL-VsZ">
                                 <rect key="frame" x="399" y="408" width="170" height="40"/>
                                 <state key="normal" title="Buttonfasdfasdf" image="sfb">
                                     <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -329,6 +329,12 @@
                                     <constraint firstAttribute="height" constant="100" id="GBn-6D-ATN"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击以上二维码有惊喜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQy-Iw-reR">
+                                <rect key="frame" x="10" y="295" width="170" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -337,7 +343,9 @@
                             <constraint firstItem="NGs-Hh-VIe" firstAttribute="leading" secondItem="HZm-yC-QYd" secondAttribute="leading" constant="20" id="GDi-vL-1ZV"/>
                             <constraint firstItem="vmZ-sv-26J" firstAttribute="top" secondItem="NGs-Hh-VIe" secondAttribute="bottom" constant="49" id="PbK-gA-jSq"/>
                             <constraint firstItem="NGs-Hh-VIe" firstAttribute="top" secondItem="nOc-UE-x6j" secondAttribute="bottom" constant="8" id="W8S-1v-0Yp"/>
+                            <constraint firstItem="hQy-Iw-reR" firstAttribute="top" secondItem="vmZ-sv-26J" secondAttribute="bottom" constant="8" id="brK-1S-3rk"/>
                             <constraint firstItem="vmZ-sv-26J" firstAttribute="leading" secondItem="HZm-yC-QYd" secondAttribute="leading" constant="10" id="c8T-ZG-Jbf"/>
+                            <constraint firstItem="hQy-Iw-reR" firstAttribute="leading" secondItem="vmZ-sv-26J" secondAttribute="leading" id="lw2-NK-bVd"/>
                             <constraint firstItem="nOc-UE-x6j" firstAttribute="leading" secondItem="HZm-yC-QYd" secondAttribute="leading" constant="20" id="qYV-3D-PcH"/>
                         </constraints>
                     </view>
