@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AdSupport
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        //获取idfa设备唯一id
+        let idfa = ASIdentifierManager.sharedManager().advertisingIdentifier.UUIDString
+        debugPrint(idfa)
+//        "46138127-975B-4858-8809-83E0B447D90B"
+//        "46138127-975B-4858-8809-83E0B447D90B"
         return true
     }
 

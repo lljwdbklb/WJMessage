@@ -9,6 +9,7 @@
 import UIKit
 
 extension UIImage {
+    //生成二维码
     class func qrcode(string:String) -> UIImage {
         let filer = CIFilter(name: "CIQRCodeGenerator")
         filer?.setDefaults()
@@ -22,6 +23,7 @@ extension UIImage {
 
 extension String {
     //ios8
+    //识别二维码
     static func qrcodeString(image:UIImage) -> String? {
         let content = CIContext(options: nil)
         let detector = CIDetector(ofType: CIDetectorTypeQRCode, context: content, options: [CIDetectorAccuracy:CIDetectorAccuracyHigh])

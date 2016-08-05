@@ -14,18 +14,19 @@ protocol HHScanViewControllerDelegate {
 }
 
 class HHScanViewController: UIViewController {
-    var captureSession:AVCaptureSession?
-    var videoPreviewLayer:AVCaptureVideoPreviewLayer?
-    let scanCenterView = UIView()
-    let scanLineView = UIImageView()
-    let textLab = UILabel()
+    private var captureSession:AVCaptureSession?
+    private var videoPreviewLayer:AVCaptureVideoPreviewLayer?
+    private let scanCenterView = UIView()
+    private let scanLineView = UIImageView()
+    private let textLab = UILabel()
+    private let scanView = UIView()
     
+    var scanSuccess = false
     
     var delegate : HHScanViewControllerDelegate?
     
-    let scanView = UIView()
+    var scanLineColor = UIColor.greenColor()
     
-    var scanSuccess = false
     
     
     override func viewDidLoad() {
@@ -69,7 +70,7 @@ class HHScanViewController: UIViewController {
         scanCenterView.addConstraint(NSLayoutConstraint(item: scanCenterView, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 200))
         
         scanLineView.translatesAutoresizingMaskIntoConstraints = false
-        scanLineView.backgroundColor = UIColor.greenColor()
+        scanLineView.backgroundColor = scanLineColor
         scanCenterView.addSubview(scanLineView)
         scanCenterView.addConstraint(NSLayoutConstraint(item: scanLineView, attribute: .Top, relatedBy: .Equal, toItem: scanCenterView, attribute: .Top, multiplier: 1.0, constant: 5))
         scanLineView.addConstraint(NSLayoutConstraint(item: scanLineView, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 1))
