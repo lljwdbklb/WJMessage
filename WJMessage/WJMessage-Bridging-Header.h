@@ -14,3 +14,4 @@
 #import "NJKWebViewProgressView.h"
 #import "CTAssetsPickerController.h"
 #import "EMCDDeviceManager.h"
+#import "SDWebImageManager.h"

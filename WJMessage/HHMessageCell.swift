@@ -245,6 +245,11 @@ class HHMessageCell: UITableViewCell {
                     bubbleView?.setImage(image,size: size)
                 } else {
                     //网络请求
+                    if model?.status == .Failed {
+                        bubbleView?.setImage(model?.failImage, size: CGSize(width: 100, height: 100))
+                    } else {
+                        bubbleView?.setImage(model?.loadImage, size: CGSize(width: 100, height: 100))
+                    }
                 }
             } else {
                 if model?.status == .Failed {
@@ -294,14 +299,14 @@ class HHMessageCell: UITableViewCell {
             label.numberOfLines = 0
             label.attributedText = text
             let rect = label.textRectForBounds(CGRect(origin: CGPointZero, size: CGSize(width: bubbleMaxWidth, height: CGFloat.max)), limitedToNumberOfLines: 0)
-            bubbleHeight += (rect.size.height > 20 ? rect.size.height : 20) + 10
+            bubbleHeight += (rect.size.height > 20 ? rect.size.height : 20) + HHMessageCell.HHMessageCellPadding
         } else {
             if let image = model.image {
                 if image.size.width > 200.0 {
                     let scalc = 200.0 / image.size.width
                     bubbleHeight += image.size.height * scalc
                 } else {
-                    bubbleHeight += image.size.height + 10
+                    bubbleHeight += image.size.height + HHMessageCell.HHMessageCellPadding
                 }
                 if bubbleHeight > 200.0 {
                     bubbleHeight = 200.0
@@ -312,13 +317,20 @@ class HHMessageCell: UITableViewCell {
                         let scalc = 200.0 / image.size.width
                         bubbleHeight += image.size.height * scalc
                     } else {
-                        bubbleHeight += image.size.height + 10
+                        bubbleHeight += image.size.height + HHMessageCell.HHMessageCellPadding
                     }
                     if bubbleHeight > 200.0 {
                         bubbleHeight = 200.0
                     }
                 } else {
                     //网络请求
+                    let image: UIImage
+                    if model.status == .Failed {
+                        image = model.failImage!
+                    } else {
+                        image = model.loadImage!
+                    }
+                    bubbleHeight += image.size.height + HHMessageCell.HHMessageCellPadding
                 }
             } else {
                 let image: UIImage
@@ -327,7 +339,7 @@ class HHMessageCell: UITableViewCell {
                 } else {
                     image = model.loadImage!
                 }
-                bubbleHeight += image.size.height + 10
+                bubbleHeight += image.size.height + HHMessageCell.HHMessageCellPadding
             }
         }
         bubbleHeight += HHMessageCell.HHMessageCellPadding

@@ -168,7 +168,7 @@ class HHMessageModel: NSObject {
             let message10 = HHMessageModel()
             message10.messageId = "11"
             message10.sessionId = sessionId
-            message10.url = ""
+            message10.url = "https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=68618220,3632831507&fm=80"
             message10.bodyType = .Image
             message10.status = HHMessageStatus.Successed
             message10.direction = .Send

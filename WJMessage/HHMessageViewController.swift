@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class HHMessageViewController: UIViewController,HHMessageMoreViewDelegate {
     let tableView = UITableView()
     var session: HHSessionModel?            //当前会话
@@ -102,6 +103,12 @@ class HHMessageViewController: UIViewController,HHMessageMoreViewDelegate {
                     let timestamp = date!.timeIntervalSince1970
                     self.messageTimeIntervalTag = timestamp
                 }
+                
+                
+                for message in ms {
+                    self._downloadFile(message)
+                }
+                
                 //刷新
                 dispatch_async(dispatch_get_main_queue(), {//主线程刷新
                     self.tableView.reloadData()
@@ -568,3 +575,50 @@ extension HHMessageViewController {
     }
 }
 
+extension HHMessageViewController {
+    //下载文件
+    func _downloadFile(message:HHMessageModel) {
+        if  message.bodyType == .Image {
+            if let url = message.url {
+                if !SDWebImageManager.sharedManager().diskImageExistsForURL(NSURL(string: url)!) {//是否在硬盘有没有
+                    SDWebImageManager.sharedManager().downloadImageWithURL(NSURL(string: url)!, options: SDWebImageOptions(rawValue: 0), progress: { (_, _) in
+                        
+                        }, completed: { (image, error, _, success, url) in
+                            if error == nil {
+                                message.image = image
+                                self._reloadTableViewDataWithMessage(message,success: true)
+                            } else {
+                                message.status = .Failed
+                                self._reloadTableViewDataWithMessage(message,success: false)
+                            }
+                    })
+                } else {
+                    message.image = SDWebImageManager.sharedManager().imageCache.imageFromDiskCacheForKey(url)
+                }
+            }
+        } else {
+            debugLog("不需要下载")
+        }
+    }
+    
+    func _reloadTableViewDataWithMessage(message:HHMessageModel,success:Bool) {
+        dispatch_async(messageQueue) { 
+            for (index,frame) in self.messages.enumerate() {
+                if frame is HHCellFrameModel {
+                    let f = frame as! HHCellFrameModel
+                    if f.messageId == message.messageId {
+                        if !success {
+                            f.cellHeight = 0
+                        }
+                        dispatch_async(dispatch_get_main_queue(), { 
+                            self.tableView.beginUpdates()
+                            self.tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: index, inSection: 0)], withRowAnimation: .None)
+                            self.tableView.endUpdates()
+                        })
+                        break
+                    }
+                }
+            }
+        }
+    }
+}
